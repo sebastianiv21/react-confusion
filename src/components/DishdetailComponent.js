@@ -46,19 +46,20 @@ function RenderComments({ comments }) {
 }
 
 const DishDetail = (props) => {
-    if (props.dish != null)
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12 col-md-5 m-1">
-          <RenderDish dish={props.dish} />
-        </div>
-        <div className="col col-md-5 m-1">
-          <RenderComments comments={props.dish.comments} />
+  if (props.dish != null)
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-5 m-1">
+            <RenderDish dish={props.dish} />
+          </div>
+          <div className="col col-md-5 m-1">
+            <RenderComments comments={props.dish.comments} />
+          </div>
         </div>
       </div>
-    </div>
-  ); else return <div></div>;
+    );
+  else return <div></div>;
 };
 
 export default DishDetail;
